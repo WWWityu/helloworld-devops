@@ -6,7 +6,7 @@ Ez a projekt egy egyszerű Node.js alapú "Hello World" alkalmazás, amely a Dev
 
 Az alkalmazás egy egyszerű HTTP szerver, amely az Express keretrendszert használja, és a server.js fájlban található.
 
-Elérhetőség: HTTP-n, a 8080-as porton (http://localhost:8080).
+Elérhetőség: HTTP-n, a 8080-as porton (http://localhost:8080) (127.0.0.1:8080)
 
 Válasz: Egyszerű szöveget ad vissza.
 
@@ -21,9 +21,7 @@ npm start
 
 2. Verziókövetés (Git és Trunk-Based Development)
 
-A projekt a Trunk-Based Development elvet követi, ahol a main (trunk) branch a mindig stabil, kiadható állapotot tartalmazza.
-
-Javasolt Git Workflow:
+Git Workflow:
 
 Trunk (main): A fő branch, amelyről minden fejlesztés indul, és ahová minden beolvad.
 
@@ -31,68 +29,17 @@ Feature Branch: Minden új funkciót vagy jelentős változást egy külön bran
 
 Merge/Pull Request: A fejlesztés végeztével a feature branch-et vissza kell olvasztani a main branch-be.
 
-Commit Történet Bemutatása (Példa)
+Commit Történet Bemutatása  
 
-A projektben a változások a következőképpen épülhetnek egymásra, értelmes commit üzenetekkel:
-
-Commit ID (példa)
-
-Branch
-
-Commit Üzenet
-
-Leírás
-
-a8c903d
-
-main
-
-feat: Alapszerver és 'Hello' üzenet implementálása
-
-Létrehozva a server.js és package.json fájlok.
-
-f2e1a4b
-
-main
-
-fix: Portszám 3000-ről 8080-ra állítása
-
-A feladatban kért 8080-as port beállítása.
-
-2d4c5c7
-
-feature/devops-uzenet
-
-feat: DevOps üzenet hozzáadása a válaszhoz
-
-Bevezetve az alkalmazásba a 'DevOps World' szöveg.
-
-45b67d8
-
-main
-
-merge: feature/devops-uzenet beolvasztása
-
-A feature branch beolvasztása a main-be. (Ez a commit volt láthatóan a feature branch)
-
-e0f9b1c
-
-main
-
-docs: README dokumentáció frissítése
+README dokumentáció frissítése
 
 Kiegészített dokumentáció a build és futtatási parancsokkal.
 
 3. Buildelés
 
-Bár a Node.js alkalmazás nem igényel hagyományos fordítást, a "buildelés" a függőségek telepítését jelenti, ami a későbbi nagyobb projektekben a fordítás (transzpiláció, minifikáció) lépése lehet.
-
 Build Parancs
 
-A projekt buildelése (azaz a függőségek telepítése) a következő paranccsal történik:
-
-npm run build
-# A package.json-ban ez a parancs megegyezik az "npm install" paranccsal.
+npm install 
 
 
 4. Konténerizálás (Docker)
@@ -103,7 +50,7 @@ Image Build Parancs
 
 A Docker image elkészítése:
 
-# -t (tag) opcióval adunk egy nevet és egy verziószámot az image-nek.
+# verziószámot adunk az image-nek
 docker build -t hello-devops:v1 .
 
 
