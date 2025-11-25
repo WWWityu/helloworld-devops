@@ -7,7 +7,7 @@ const port = 8080;
 // Egyszerű HTTP GET útvonal
 app.get('/', (req, res) => {
   // A kötelezően elvárt egyszerű szöveges válasz
-  res.send('Hello DevOps World! - Végleges verzió');
+  res.send('Hello DevOps World! - Verebes Viktor által készített végleges verzió');
 });
 
 app.listen(port, () => {
