@@ -1,16 +1,17 @@
 {
-    "name": "hello-devops-app",
-    "version": "1.0.0",
-    "description": "Egy egyszerű Node.js alkalmazás a DevOps alapjainak bemutatására.",
-    "main": "server.js",
-    "type": "module",
-    "scripts": {
-      "install-deps": "npm install",
-      "build": "npm run install-deps",
-      "start": "node server.js",
-      "test": "echo \"Tesztelés még nem implementált\" && exit 0"
-    },
-    "dependencies": {
-      "express": "^4.19.2"
-    }
+  "name": "helloworld-devops-app",
+  "version": "1.0.0",
+  "description": "Egy egyszerű Node.js alkalmazás a DevOps alapjainak bemutatására.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "install-deps": "npm install",
+    "build": "npm run install-deps",
+    "start": "node server.js",
+    "test": "echo \"Tesztelés még nem implementált\" && exit 0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "open": "^10.1.0"
   }
+}

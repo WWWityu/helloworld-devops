@@ -32,5 +32,4 @@ COPY server.js .
 EXPOSE 8080
 
 # A konténer induláskor automatikusan futtatja az appot
-# A README.md-ben leírtak szerint HTTP-n elérhető lesz.
 CMD ["npm", "start"]

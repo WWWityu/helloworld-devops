@@ -1,30 +1,18 @@
 {
-    "name": "Node.js DevOps Alapok",
-    "dockerFile": "Dockerfile",
-    
-    // A Dev Container indításakor lefutó parancsok: telepítjük a függőségeket.
-    "postCreateCommand": "npm install",
+  "name": "Node.js DevOps Alapok",
+  "dockerFile": "Dockerfile",
   
-    // Portok publikálása és automatikus megnyitása
-    "appPort": "8080:8080",
-    "forwardPorts": [8080],
+  // A Dev Container indításakor lefutó parancsok: telepítjük a függőségeket.
+  "postCreateCommand": "npm install",
+
+  // Portok publikálása és automatikus megnyitása
+  "appPort": "8080:8080",
+  "forwardPorts": [8080],
+  
     
-    // VS Code kiterjesztések, amelyek hasznosak lehetnek a fejlesztéshez
-    "customizations": {
-      "vscode": {
-        "settings": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
-        "extensions": [
-          "dbaeumer.vscode-eslint",
-          "esbenp.prettier-vscode"
-        ]
-      }
-    },
-    
-    // Munkakönyvtár beállítása
-    "workspaceFolder": "/workspace",
-    
-    // A felhasználó a Dev Container Dockerfile-ban lett definiálva
-    "remoteUser": "devuser"
-  }
+  // Munkakönyvtár beállítása
+  "workspaceFolder": "/workspace",
+  
+  // A felhasználó a Dev Container Dockerfile-ban lett definiálva
+  "remoteUser": "devuser"
+}

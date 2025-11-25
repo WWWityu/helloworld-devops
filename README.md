@@ -1,4 +1,4 @@
-Hello DevOps World - Projekt
+Hello DevOps World - GDE Projekt VEREBES VIKTOR R8Q3N0
 
 Ez a projekt egy egyszerű Node.js alapú "Hello World" alkalmazás, amely a DevOps alapvető lépéseit (kódkészítés, verziókövetés, buildelés, konténerizálás, Dev Container) mutatja be.
 
@@ -6,20 +6,22 @@ Ez a projekt egy egyszerű Node.js alapú "Hello World" alkalmazás, amely a Dev
 
 Az alkalmazás egy egyszerű HTTP szerver, amely az Express keretrendszert használja, és a server.js fájlban található.
 
-Elérhetőség: HTTP-n, a 8080-as porton (http://localhost:8080) (127.0.0.1:8080)
+Elérhetőség: HTTP-n, a 8080-as porton (http://localhost:8080) vagy (127.0.0.1:8080)
 
-Válasz: Egyszerű szöveget ad vissza.
+Válaszként: Egyszerű szöveget ad vissza.
 
 Lokális futtatás:
 
-# 1. Telepítés (ha még nem történt meg)
+    # 1. Telepítés (ha még nem történt meg)
 npm install
 
-# 2. Futtatás
+    # 2. Futtatás
 npm start
 
+Várja meg, amíg a terminál kiírja: "Az alkalmazás a http://localhost:8080 címen fut!"
 
 2. Verziókövetés (Git és Trunk-Based Development)
+A projekt a Trunk-Based Development elvet követi, ahol a main (trunk) branch a mindig stabil, kiadható állapotot tartalmazza.
 
 Git Workflow:
 
@@ -29,15 +31,13 @@ Feature Branch: Minden új funkciót vagy jelentős változást egy külön bran
 
 Merge/Pull Request: A fejlesztés végeztével a feature branch-et vissza kell olvasztani a main branch-be.
 
-Commit Történet Bemutatása  
 
 README dokumentáció frissítése
 
 Kiegészített dokumentáció a build és futtatási parancsokkal.
 
 3. Buildelés
-
-Build Parancs
+nem igényel hagyományos fordítást, a "buildelés" a függőségek telepítését jelenti
 
 npm install 
 
@@ -60,13 +60,15 @@ Az elkészített konténer futtatása, a konténer 8080-as portjának a helyi g�
 
 # -d opcióval a háttérben futtatjuk
 # -p 8080:8080 a port átirányítás
-# hello-devops:v1 az elkészített image neve
-docker run -d -p 8080:8080 hello-devops:v1
+# helloworld-devops:v1 az elkészített image neve
+docker run -d -p 8080:8080 helloworld-devops:v1
 
 
 A futtatás után az alkalmazás elérhető a böngészőben: http://localhost:8080.
 
-5. Választható feladatrész: Dev Container (VS Code / GitHub Codespaces)
+
+
+Választható feladatrész: Dev Container (VS Code / GitHub Codespaces)
 
 A projekt tartalmazza a szükséges konfigurációt a modern fejlesztői környezetek (pl. VS Code Dev Containers kiterjesztés vagy GitHub Codespaces) használatához. Ez biztosítja, hogy mindenki ugyanolyan, izolált környezetben dolgozzon a projekten.
 
@@ -86,11 +88,6 @@ Nyissa meg a projektmappát a VS Code-ban.
 
 A jobb alsó sarokban (vagy a Command Palette-ben: Ctrl+Shift+P) kattintson a "Reopen in Container" gombra, vagy válassza a "Dev Containers: Reopen in Container" parancsot.
 
-GitHub Codespaces esetén:
-
-Töltse fel a repót a GitHubra.
-
-Kattintson a zöld "Code" gombra, majd válassza a "Codespaces" fület, és indítson el egy új Codespace-t.
 
 Futtatás Dev Containerben:
 
@@ -98,5 +95,4 @@ A Dev Container indítása után a függőségek már telepítve vannak. Futtass
 
 npm start
 
-
-A VS Code automatikusan felismeri a 8080-as portot, és megkérdezi, hogy szeretné-e megnyitni a böngészőben.
+A futtatás után az alkalmazás elérhető a böngészőben: http://localhost:8080. vagy a 127.0.0.1:8080
