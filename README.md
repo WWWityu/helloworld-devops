@@ -10,6 +10,7 @@ Válaszként: Vizuálisan formázott szöveget add vissza.
 
 # Futtatás
 npm start
+
 Várja meg, amíg a terminál kiírja: "Az alkalmazás a http://localhost:8080 címen fut!"
 
 
@@ -38,16 +39,18 @@ git pull origin main: Letöltötte a távoli (GitHub) változásokat, ha más is
 
 
 Buildelés
-A konténerizálás célja az alkalmazás és az összes szükséges függőség becsomagolása egy hordozható, izolált egységbe (konténerbe). Ez garantálja, hogy az alkalmazás ugyanúgy fusson a fejlesztői gépen, a tesztkörnyezetben és a felhőben (Render).
+A konténerizálás célja az alkalmazás és az összes szükséges függőség becsomagolása egy hordozható, izolált egységbe (konténerbe). 
+Ez garantálja, hogy az alkalmazás ugyanúgy fusson a fejlesztői gépen, a tesztkörnyezetben és a felhőben (Render).
 A Projektben Alkalmazott Lépések:
 Dockerfile: Ez a fájl tartalmazza azokat az utasításokat, amelyek alapján a Docker létrehozza az image-et.
 Alap Image: A legfrissebb Node.js image-et használja biztosítva a futtatókörnyezetet.
 Függőségek: Átmásolja a package.json fájlt, és lefuttatja az npm install parancsot.
 Alkalmazáskód: Átmásolja a server.js fájlt.
 Exponálás és Indítás: Az EXPOSE 8080 jelzi a Dockernek, hogy az app a 8080-as porton figyel, a CMD ["npm", "start"] parancs pedig elindítja a webszolgáltatást a konténer indulásakor.
-Image Építése: A docker build -t hello-devops:v1 . parancs lefordítja a Dockerfile-t egy futtatható image-gé.
+Image Építése:
+build -t hello-devops:v1 . - parancs lefordítja a Dockerfile-t egy futtatható image-gé.
 Futtatás: A docker run -d -p 8080:8080 hello-devops:v1 parancs elindítja az image-et egy konténerben, összekötve a konténer belső portját (8080) a helyi gép portjával, így az elérhetővé válik a böngészőből.
-NODE.JS nem igényel hagyományos fordítást, a "buildelés" a függőségek telepítését jelenti
+NODE.JS nem igényel hagyományos fordítást, a "buildelés" a függőségek telepítését jelenti.
 
 projekt buildelése az alábbi paranccsal történik:
 npm install 
@@ -62,11 +65,9 @@ Az elkészített konténer futtatása, a konténer 8080-as portjának a helyi g�
 helloworld-devops:v1 az elkészített image neve
 docker run -d -p 8080:8080 helloworld-devops:v1
 
-# A futtatás után az alkalmazás elérhető a böngészőben: http://localhost:8080.
-
 
 # Választható feladatrész: 
-# Felhő szolgáltatás használata (opció 4)
+Felhő szolgáltatás használata (opció 4)
 
 Az alkalmazás felhőben történő futtatására a RENDER felhőszolgáltatást választottam
 A Render egy modern felhőplatform (PaaS - Platform as a Service), amelyet a projektünkben a Folyamatos Deployment (CD) megvalósítására használtunk. Az ingyenes szintje (Free Tier) ideális a mi Node.js alkalmazásunkhoz.
@@ -80,4 +81,4 @@ A Render fő előnye, hogy automatikusan integrálódik a GitHubbal, így manuá
 -Elérhetőség: A sikeres telepítés után az alkalmazás elérhetővé válik a fix Publikus URL-en ami jelen esetben a 
 
 Az elkészül applikáció felhős elérhetősége:
-https://helloworld-devops-r8q3n0.onrender.com
+# https://helloworld-devops-r8q3n0.onrender.com
