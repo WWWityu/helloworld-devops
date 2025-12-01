@@ -32,10 +32,15 @@ Integráció (Merge): A funkció elkészülte után az ágat visszaolvasztottuk 
 
 Git Parancsok a Projektben:
 git init: Létrehozta a helyi Git tárolót.
+
 git add .: Hozzátette a módosított fájlokat a követéshez.
+
 git commit -m "mit commitelünk": Létrehozta a mentett pontot a helyi történetben.
+
 git push origin main: Feltöltötte a helyi történetet a távoli GitHub repóba.
+
 git pull origin main: Letöltötte a távoli (GitHub) változásokat, ha más is dolgozott a kódon.
+
 
 
 Buildelés
